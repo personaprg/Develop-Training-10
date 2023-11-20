@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      /* 박스 크기를 미리 정의 */
+      box-sizing: border-box; 
+    }
+    body{
+      margin: 0;
+      padding: 0;
+      /* 위 내용이 2번 사용됨, 문서 외부 스타일과 body 내부 스타일의 설정을 따로해줌*/
+
+      font-family: "Arial", sans-serif;
+
+      font-size: 1rem;
+      /* eight는 20px 고정값이고, 폰트 사이즈는 1rem */
+      /* 반응형 작업을 위한 폰트 단위라고 한다. */
+      color: black;
+      background-color: white;
+    }
+    /* 스타일 중복 적용을 위한 태그명 2개 사용 */
+    h1,ul{
+      width: 80vw;
+      margin: 2vh auto;
+      /* 해당 내용은 반응형 웹 형태를 만들기 위한 크기 조절로 분석됨 */
+    }
+
+    /* 제목 스타일 */
+    h1{
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 2vh;
+      border-bottom: 2px solid grey;
+    }
+
+    ul{
+      list-style: none;
+      /* li 태그에 점을 없애주는 역할 */
+      padding-left: 0;
+    }
+    li{
+      background-color: rgba(0, 0, 0, 0.1);
+      /* 4방향 중 위아래 + 좌우 단축 방식 처리 */
+      margin: 1vh 0;
+      /* 
+      margin: 1vh;: 상하 여백은 1%의 뷰포트 높이, 좌우 여백은 없음.
+      margin: 2vh 1vw;: 상하 여백은 2%의 뷰포트 높이, 좌우 여백은 1%의 뷰포트 너비.
+      margin: 10px 20px 15px 5px;: 위에서부터 시계방향으로 각각의 여백을 픽셀 단위로 지정.
+      */
+
+    }
+    h2{
+      font-size: 1.5rem;
+      margin-bottom: 1vh;
+    }
+
+    p{
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    /* 버튼 스타일링 */
+    button{
+      font-size: 1rem;
+      padding: 1vh 2vw;
+      margin: 2vh auto;
+      display: block;
+      /* button 태그 기븐 스타일 검은색으로 커스텀 */
+
+      border-radius: 0.3rem;
+      border: none;
+      cursor: pointer;
+      background-color: #ff6666; 
+      /* 색상 코드를 이용해 직접 지정 */
+      color: white;
+    }
+
+    /* 버튼위에 마우스 올리면 시작되는 이벤트(이거 가사으로 선택한다는 의미로 가상 선택자라 함) */
+    button:hover{
+      background-color: #0056b3;
+    }
+
+  </style>
+
+</head>
+<body>
+  <h1> 아이디어 도출바업</h1>
+  
+  <ul>
+    <li>
+      <h2>브레인스토밍</h2>
+      <p>
+        <!-- li태그 none 속성으로 인해 번호 직접 지정 -->
+        1. 여러사람 모여 다양한 아이디어 제시 방법
+        2. '가치판단'하지 않고 일단 다 꺼내는 것이 핵심
+        3. 마치 4살 꼬마아이가 맥락없이 질문하는 것과 매우 흡사
+      </p>
+    </li>
+    <li>
+      <h2>SWOT 분석</h2>
+      <p>
+        1. SWOT 분석은 감정, 약점, 기회, 위헙의 약자
+        2. 마켓팅 전략 수립때 매우 인기가 높은 객관적 지표화 분석 방법
+        3. 충분한 만큼 아이디어 자산화 진행시, 관점 매몰 탈출의 도움이 되는 방법
+      </p>
+    </li>
+    <li>
+      <h2>피쉬본 다이어그램</h2>
+      <p>
+        1. "물고기 뼈" 처럼 그려 나가는 중간 단계 방식
+        2. 놓치기 쉬운 관점을 점검
+        3. '완성형'에 다다랐을대 예상할 수 있는 예외 변수 확인 방법
+      </p>
+    </li>
+
+    <button id="togleBtn">다크모드</button>
+
+
+
+
+  </ul>
+</body>
+</html>
