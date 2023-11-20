@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      color: black;
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+    <H1>아이디어 도출 바업</H1>
+    <ul>
+      <li>
+        <h2>브레인스토밍</h2>
+        <p>'가치판단' 하지말자</p>
+      </li>
+      <li>
+        <h2>SWOT 분석</h2>
+      </li>
+      <p>강점, 약점, 기회 위헙의 약자</p>
+    </ul>
+    <li>
+      <h2>피쉬본 다이어그램</h2>
+      <p>물고기 뼈 처럼 그려나가 중간단계 점검 방식</p>
+    </li>
+
+    <button id="toggleBtn">다크모드</button>
+
+    <script>
+      const togleBtn = document.getElementById('toggleBtn');
+      //"togleBtn"이라는 ID나 클래스 이름을 가진 요소를 가져와서 클릭 이벤트 리스너를 추가
+      togleBtn.addEventListener("click", ()=>{
+        const body = document.querySelector('body'); //* querySelector메소드 조사 필요
+        //ocument.querySelector()는 제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element (en-US) 를 반환한다.
+
+        //querySelector 메소드는 HTML 문서에서 특정 CSS 선택자에 해당하는 첫 번째 요소를 찾아 반환하는 JavaScript 메소드입니다. 비유적으로 설명하면, 이 메소드는 당신에게 특정한 유형이나 특성을 가진 첫 번째 사물을 찾아내는 일종의 "탐지 도구"라고 생각할 수 있습니다.
+
+
+        //* 여기서 특정 선택자란?
+        //HTML 문서 내에서 특정 요소나 요소 그룹을 선택하기 위한 문자열 패턴이다.
+
+        /* 예시)
+        CSS 선택자는 클래스가 "container"인 요소 내부의 모든 <p>(문단) 요소를 선택한다면
+          .container p { } 이런식으로 p 요소 선택
+        */
+
+
+        if(body.style.backgroundColor === 'white'){
+          body.style.backgroundColor = 'black';
+          body.style.color = 'white';
+
+        }else{
+          body.style.backgroundColor = 'white';
+          body.style.color = "black";
+        }
+      });
+    </script>
+
+</body>
+</html>
