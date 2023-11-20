@@ -48,12 +48,12 @@
           .container p { } 이런식으로 p 요소 선택
         */
 
-        if(body.style.backgroundColor === 'white'){
+        if(body.style.backgroundColor === 'white'){ //배경이 검은색이면 body 모든 요소 색 변경, body는 querySelector로 선택한 요소
           body.style.backgroundColor = 'black';
           body.style.color = 'white';
 
         }else{
-          body.style.backgroundColor = 'white';
+          body.style.backgroundColor = 'white'; //다시 반전하기 위한 토글 기능
           body.style.color = "black";
         }
       });
