@@ -120,6 +120,29 @@
     </li>
 
     <button id="togleBtn">다크모드</button>
+    
+    <script>
+      const toggleBtn = document.getElementById("togleBtn");
+
+      toggleBtn.addEventListener("click", ()=>{
+
+        const body = document.querySelector("body");
+        // index.html과 같은 방법으로 body에 접근
+
+        if(body.style.backgroundColor === 'white'){
+          body.style.backgroundColor = 'black';
+          body.style.color = 'white';
+
+        }else{
+          body.style.backgroundColor = 'white'; //토글 기능
+          body.style.color = "black";
+        }
+      });
+
+      })
+
+
+    </script>
 
 
 
